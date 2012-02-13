@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>asm</string>
+		<string>inc</string>
+	</array>
+	<key>name</key>
+	<string>AVR ASM</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>General perpose register set</string>
+			<key>match</key>
+			<string>(?i)\b((r\d{1,2})|(xl|xh|yl|yh|zl|zh))\b</string>
+			<key>name</key>
+			<string>storage.type.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Arithmetic and logic instruction mnemonics</string>
+			<key>match</key>
+			<string>(?i)\b(add|adc|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\b</string>
+			<key>name</key>
+			<string>keyword.operator.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Branch instruction mnemonics</string>
+			<key>match</key>
+			<string>(?i)\b(rjmp|ijmp|rcall|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\b</string>
+			<key>name</key>
+			<string>keyword.operator.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Bit and bit-test instruction mnemonics</string>
+			<key>match</key>
+			<string>(?i)\b(sbi|cbi|lsl|lsr|rol|ror|asr|swap|bset|bclr|bst|bld|sec|clc|sen|cln|sez|clz|sei|cli|ses|cls|sev|clv|set|clt|seh|clh)\b</string>
+			<key>name</key>
+			<string>keyword.operator.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Data transfer instruction mnemonics</string>
+			<key>match</key>
+			<string>(?i)\b(mov|movw|ldi|ld|ldd|lds|st|std|sts|lpm|spm|in|out|push|pop)\b</string>
+			<key>name</key>
+			<string>keyword.operator.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>MCU control instruction mnemonics</string>
+			<key>match</key>
+			<string>(?i)\b(nop|sleep|wdr|break)\b</string>
+			<key>name</key>
+			<string>keyword.coperator.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>AVR ASM 1.0 directives</string>
+			<key>match</key>
+			<string>(?i)(^|\s)\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)\b</string>
+			<key>name</key>
+			<string>constant.character.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Comment line</string>
+			<key>match</key>
+			<string>(//|;)(\s|\S)*</string>
+			<key>name</key>
+			<string>comment.line.asm</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(/\*)</string>
+			<key>comment</key>
+			<string>C-style comment block (AVR ASM 2.0 only)</string>
+			<key>end</key>
+			<string>(\*/)</string>
+			<key>name</key>
+			<string>comment.block.asm</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(^|\s)(")</string>
+			<key>comment</key>
+			<string>Single-line string</string>
+			<key>end</key>
+			<string>(")</string>
+			<key>name</key>
+			<string>string.asm</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(^|\s)(\')</string>
+			<key>comment</key>
+			<string>Single-line string</string>
+			<key>end</key>
+			<string>(\')</string>
+			<key>name</key>
+			<string>string.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hex number constant</string>
+			<key>match</key>
+			<string>(?i)\b(0x(\d|[A-F]|_)+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Oct number constant</string>
+			<key>match</key>
+			<string>\b(0([0-8]|_)+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Bin number constant</string>
+			<key>match</key>
+			<string>\b(0b(0|1|_)+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Dec number constant</string>
+			<key>match</key>
+			<string>\b((\d|_)+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.asm</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.asm</string>
+	<key>uuid</key>
+	<string>97b6acae-cfc1-4c14-b572-c51987e1e023</string>
+</dict>
+</plist>

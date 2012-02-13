@@ -1,0 +1,103 @@
+{ 
+    "name": "AVR ASM",
+    "scopeName": "source.asm", 
+    "fileTypes": ["asm", "inc"],
+    "patterns": [
+        
+        {
+            "match": "(?i)\\b((r\\d{1,2})|(xl|xh|yl|yh|zl|zh))\\b",
+            "name": "storage.type.asm",
+            "comment": "General perpose register set"
+        },
+
+        {
+            "match": "(?i)\\b(add|adc|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\\b",
+            "name": "keyword.operator.asm",
+            "comment": "Arithmetic and logic instruction mnemonics"
+        },
+
+        { 
+            "match": "(?i)\\b(rjmp|ijmp|rcall|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\\b",
+            "name": "keyword.operator.asm",
+            "comment": "Branch instruction mnemonics"
+        },
+
+        { 
+            "match": "(?i)\\b(sbi|cbi|lsl|lsr|rol|ror|asr|swap|bset|bclr|bst|bld|sec|clc|sen|cln|sez|clz|sei|cli|ses|cls|sev|clv|set|clt|seh|clh)\\b",
+            "name": "keyword.operator.asm",
+            "comment": "Bit and bit-test instruction mnemonics"
+        },
+
+        { 
+            "match": "(?i)\\b(mov|movw|ldi|ld|ldd|lds|st|std|sts|lpm|spm|in|out|push|pop)\\b",
+            "name": "keyword.operator.asm",
+            "comment": "Data transfer instruction mnemonics"
+        },
+
+        { 
+            "match": "(?i)\\b(nop|sleep|wdr|break)\\b",
+            "name": "keyword.coperator.asm",
+            "comment": "MCU control instruction mnemonics"
+        },
+
+        { 
+            "match": "(?i)(^|\\s)\\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)\\b",
+            "name": "constant.character.asm",
+            "comment": "AVR ASM 1.0 directives"
+        },
+
+        {
+            "match": "(\/\/|;)(\\s|\\S)*",
+            "name": "comment.line.asm",
+            "comment": "Comment line"
+        },
+
+        {
+            "begin": "(\/\\*)",
+            "end": "(\\*\/)",
+            "name": "comment.block.asm",
+            "comment": "C-style comment block (AVR ASM 2.0 only)"
+        },
+
+        {
+            "begin": "(^|\\s)(\")",
+            "end": "(\")",
+            "name": "string.asm",
+            "comment": "Single-line string"
+        },
+
+        {
+            "begin": "(^|\\s)(\\')",
+            "end": "(\\')",
+            "name": "string.asm",
+            "comment": "Single-line string"
+        },
+
+        {
+            "match": "(?i)\\b(0x(\\d|[A-F]|_)+)\\b",
+            "name": "constant.numeric.asm",
+            "comment": "Hex number constant"
+        },
+
+        {
+            "match": "\\b(0([0-8]|_)+)\\b",
+            "name": "constant.numeric.asm",
+            "comment": "Oct number constant"
+        },
+
+        {
+            "match": "\\b(0b(0|1|_)+)\\b",
+            "name": "constant.numeric.asm",
+            "comment": "Bin number constant"
+        },
+
+        {
+            "match": "\\b((\\d|_)+)\\b",
+            "name": "constant.numeric.asm",
+            "comment": "Dec number constant"
+        }
+
+    ],
+
+    "uuid": "97b6acae-cfc1-4c14-b572-c51987e1e023"
+}
