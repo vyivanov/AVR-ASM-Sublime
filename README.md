@@ -1,4 +1,4 @@
-## <center> AVR-ASM-Sublime </center>
+## AVR-ASM-Sublime ##
 
 ### Description ###
 
@@ -12,7 +12,7 @@ AVR-ASM-Sublime is [avr](http://atmel.com/) assembler syntax definition for [Sub
 
 ### Installation ###
 
-There are two ways to install this syntax definition.
+There are three ways to install this syntax definition.
    
 1. Simplest way. Download repository content to your local disk and copy folder `AVR-ASM-Sublime` (renamed) to Sublime [packages directory](http://sublimetext.info/docs/en/basic_concepts.html#the-packages-directory).
 2. Another simplest way. <br />
