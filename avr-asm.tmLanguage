@@ -15,7 +15,15 @@
 			<key>comment</key>
 			<string>General perpose register set</string>
 			<key>match</key>
-			<string>(?i)\b((r\d{1,2})|(xl|xh|yl|yh|zl|zh))\b</string>
+			<string>(?i)\br(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)\b</string>
+			<key>name</key>
+			<string>storage.type.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>General perpose register set (16-bit pointers)</string>
+			<key>match</key>
+			<string>(?i)\b(xl|xh|yl|yh|zl|zh)\b</string>
 			<key>name</key>
 			<string>storage.type.asm</string>
 		</dict>
@@ -63,7 +71,7 @@
 			<key>comment</key>
 			<string>AVR ASM 1.0 directives</string>
 			<key>match</key>
-			<string>(?i)(^|\s)\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)\b</string>
+			<string>(?i)(^|\s)\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)</string>
 			<key>name</key>
 			<string>constant.character.asm</string>
 		</dict>
@@ -86,22 +94,18 @@
 			<string>comment.block.asm</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(^|\s)(")</string>
 			<key>comment</key>
 			<string>Single-line string</string>
-			<key>end</key>
-			<string>(")</string>
+			<key>match</key>
+			<string>(^|\s)"[\w\s\W]*"($|\s)</string>
 			<key>name</key>
 			<string>string.asm</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(^|\s)(\')</string>
 			<key>comment</key>
 			<string>Single-line string</string>
-			<key>end</key>
-			<string>(\')</string>
+			<key>match</key>
+			<string>(^|\s)\'[\w\s\W]*\'($|\s)</string>
 			<key>name</key>
 			<string>string.asm</string>
 		</dict>
@@ -109,7 +113,7 @@
 			<key>comment</key>
 			<string>Hex number constant</string>
 			<key>match</key>
-			<string>(?i)\b(0x(\d|[A-F]|_)+)\b</string>
+			<string>(?i)\b(0x(\d|[A-F])+)\b</string>
 			<key>name</key>
 			<string>constant.numeric.asm</string>
 		</dict>
@@ -117,7 +121,7 @@
 			<key>comment</key>
 			<string>Oct number constant</string>
 			<key>match</key>
-			<string>\b(0([0-8]|_)+)\b</string>
+			<string>\b(0[0-7]+)\b</string>
 			<key>name</key>
 			<string>constant.numeric.asm</string>
 		</dict>
@@ -125,7 +129,7 @@
 			<key>comment</key>
 			<string>Bin number constant</string>
 			<key>match</key>
-			<string>\b(0b(0|1|_)+)\b</string>
+			<string>\b(0b(0|1)+)\b</string>
 			<key>name</key>
 			<string>constant.numeric.asm</string>
 		</dict>
@@ -133,7 +137,7 @@
 			<key>comment</key>
 			<string>Dec number constant</string>
 			<key>match</key>
-			<string>\b((\d|_)+)\b</string>
+			<string>\b(0|[1-9]\d+)\b</string>
 			<key>name</key>
 			<string>constant.numeric.asm</string>
 		</dict>

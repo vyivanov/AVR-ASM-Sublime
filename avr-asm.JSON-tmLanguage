@@ -3,11 +3,17 @@
     "scopeName": "source.asm", 
     "fileTypes": ["asm", "inc"],
     "patterns": [
-        
+
         {
-            "match": "(?i)\\b((r\\d{1,2})|(xl|xh|yl|yh|zl|zh))\\b",
+            "match": "(?i)\\br(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)\\b",
             "name": "storage.type.asm",
             "comment": "General perpose register set"
+        },
+
+        {
+            "match": "(?i)\\b(xl|xh|yl|yh|zl|zh)\\b",
+            "name": "storage.type.asm",
+            "comment": "General perpose register set (16-bit pointers)"
         },
 
         {
@@ -41,7 +47,7 @@
         },
 
         { 
-            "match": "(?i)(^|\\s)\\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)\\b",
+            "match": "(?i)(^|\\s)\\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)",
             "name": "constant.character.asm",
             "comment": "AVR ASM 1.0 directives"
         },
@@ -60,39 +66,37 @@
         },
 
         {
-            "begin": "(^|\\s)(\")",
-            "end": "(\")",
+            "match": "(^|\\s)\"[\\w\\s\\W]*\"($|\\s)",
             "name": "string.asm",
             "comment": "Single-line string"
         },
 
         {
-            "begin": "(^|\\s)(\\')",
-            "end": "(\\')",
+            "match": "(^|\\s)\\'[\\w\\s\\W]*\\'($|\\s)",
             "name": "string.asm",
             "comment": "Single-line string"
         },
 
         {
-            "match": "(?i)\\b(0x(\\d|[A-F]|_)+)\\b",
+            "match": "(?i)\\b(0x(\\d|[A-F])+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Hex number constant"
         },
 
         {
-            "match": "\\b(0([0-8]|_)+)\\b",
+            "match": "\\b(0[0-7]+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Oct number constant"
         },
 
         {
-            "match": "\\b(0b(0|1|_)+)\\b",
+            "match": "\\b(0b(0|1)+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Bin number constant"
         },
 
         {
-            "match": "\\b((\\d|_)+)\\b",
+            "match": "\\b(0|[1-9]\\d+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Dec number constant"
         }
