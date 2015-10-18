@@ -13,7 +13,7 @@
 	<array>
 		<dict>
 			<key>comment</key>
-			<string>General perpose register set</string>
+			<string>General purpose register set</string>
 			<key>match</key>
 			<string>(?i)\br(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)\b</string>
 			<key>name</key>
@@ -21,7 +21,7 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>General perpose register set (16-bit pointers)</string>
+			<string>General purpose register set (16-bit pointers)</string>
 			<key>match</key>
 			<string>(?i)\b(xl|xh|yl|yh|zl|zh)\b</string>
 			<key>name</key>
@@ -140,6 +140,20 @@
 			<string>\b(0|[1-9]\d+)\b</string>
 			<key>name</key>
 			<string>constant.numeric.asm</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Label</string>
+			<key>match</key>
+			<string>([\w\d]+)(:)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>scopeName</key>
