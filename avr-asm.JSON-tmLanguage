@@ -17,7 +17,7 @@
         },
 
         {
-            "match": "(?i)\\b(add|adc|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\\b",
+            "match": "(?i)\\b(add|adc|adiw|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\\b",
             "name": "keyword.operator.asm",
             "comment": "Arithmetic and logic instruction mnemonics"
         },
