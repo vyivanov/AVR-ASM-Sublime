@@ -40,7 +40,7 @@
             "comment": "MCU control instruction mnemonics"
         },
         { 
-            "match": "(?i)(^|\\s)\\.(byte|csegsize|cseg|db|dd|def|device|dq|dseg|dw|elseif|elif|else|endif|endmacro|endm|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef|word|warning)",
+            "match": "(?i)(^|\\s)\\.(byte|csegsize|cseg|db|dd|def|device|dq|dseg|dw|elseif|elif|else|endif|endmacro|endm|equ|error|eseg|exit|ifdef|ifndef|if|include|listmac|list|macro|message|nolist|org|set|undef|word|warning)",
             "name": "constant.character.asm",
             "comment": "AVR ASM 1.0 directives"
         },
