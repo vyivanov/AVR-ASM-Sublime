@@ -2,106 +2,89 @@
     "name": "AVR ASM",
     "scopeName": "source.asm", 
     "fileTypes": ["asm", "inc"],
-    "patterns": [
-
+    "patterns": 
+    [
         {
-            "match": "(?i)\\br(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)\\b",
+            "match": "(?i)\\bR(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)\\b",
             "name": "storage.type.asm",
             "comment": "General perpose register set"
         },
-
         {
-            "match": "(?i)\\b(xl|xh|yl|yh|zl|zh)\\b",
+            "match": "(?i)\\b(XL|XH|YL|YH|ZL|ZH)\\b",
             "name": "storage.type.asm",
             "comment": "General perpose register set (16-bit pointers)"
         },
-
         {
-            "match": "(?i)\\b(add|adc|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\\b",
+            "match": "(?i)\\b(add|adc|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser|adiw|mul|muls|mulsu|fmul|fmuls|fmulsu)\\b",
             "name": "keyword.operator.asm",
             "comment": "Arithmetic and logic instruction mnemonics"
         },
-
         { 
-            "match": "(?i)\\b(rjmp|ijmp|rcall|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\\b",
+            "match": "(?i)\\b(rjmp|ijmp|eijmp|jmp|rcall|icall|eicall|call|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\\b",
             "name": "keyword.operator.asm",
             "comment": "Branch instruction mnemonics"
         },
-
         { 
             "match": "(?i)\\b(sbi|cbi|lsl|lsr|rol|ror|asr|swap|bset|bclr|bst|bld|sec|clc|sen|cln|sez|clz|sei|cli|ses|cls|sev|clv|set|clt|seh|clh)\\b",
             "name": "keyword.operator.asm",
             "comment": "Bit and bit-test instruction mnemonics"
         },
-
         { 
-            "match": "(?i)\\b(mov|movw|ldi|ld|ldd|lds|st|std|sts|lpm|spm|in|out|push|pop)\\b",
+            "match": "(?i)\\b(mov|movw|ldi|ld|ldd|lds|st|std|sts|lpm|elpm|spm|espm|in|out|push|pop)\\b",
             "name": "keyword.operator.asm",
             "comment": "Data transfer instruction mnemonics"
         },
-
         { 
             "match": "(?i)\\b(nop|sleep|wdr|break)\\b",
             "name": "keyword.coperator.asm",
             "comment": "MCU control instruction mnemonics"
         },
-
         { 
-            "match": "(?i)(^|\\s)\\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)",
+            "match": "(?i)(^|\\s)\\.(byte|csegsize|cseg|db|dd|def|device|dq|dseg|dw|elseif|elif|else|endif|endmacro|endm|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef|word|warning)",
             "name": "constant.character.asm",
             "comment": "AVR ASM 1.0 directives"
         },
-
         {
             "match": "(\/\/|;)(\\s|\\S)*",
             "name": "comment.line.asm",
             "comment": "Comment line"
         },
-
         {
             "begin": "(\/\\*)",
             "end": "(\\*\/)",
             "name": "comment.block.asm",
             "comment": "C-style comment block (AVR ASM 2.0 only)"
         },
-
         {
             "match": "(^|\\s)\"[\\w\\s\\W]*\"($|\\s)",
             "name": "string.asm",
             "comment": "Single-line string"
         },
-
         {
             "match": "(^|\\s)\\'[\\w\\s\\W]*\\'($|\\s)",
             "name": "string.asm",
             "comment": "Single-line string"
         },
-
         {
             "match": "(?i)\\b(0x(\\d|[A-F])+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Hex number constant"
         },
-
         {
             "match": "\\b(0[0-7]+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Oct number constant"
         },
-
         {
             "match": "\\b(0b(0|1)+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Bin number constant"
         },
-
         {
             "match": "\\b(0|[1-9]\\d+)\\b",
             "name": "constant.numeric.asm",
             "comment": "Dec number constant"
         }
-
     ],
-
     "uuid": "97b6acae-cfc1-4c14-b572-c51987e1e023"
 }
