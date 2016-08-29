@@ -31,7 +31,7 @@
 			<key>comment</key>
 			<string>Arithmetic and logic instruction mnemonics</string>
 			<key>match</key>
-			<string>(?i)\b(add|adc|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\b</string>
+			<string>(?i)\b(add|adc|adiw|sub|subi|sbci|sbc|sbiw|fmul|fmuls|fmulsu|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\b</string>
 			<key>name</key>
 			<string>keyword.operator.asm</string>
 		</dict>
@@ -39,7 +39,7 @@
 			<key>comment</key>
 			<string>Branch instruction mnemonics</string>
 			<key>match</key>
-			<string>(?i)\b(rjmp|ijmp|jmp|rcall|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\b</string>
+			<string>(?i)\b(eijmp|rjmp|ijmp|jmp|eicall|icall|rcall|reti|ret|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\b</string>
 			<key>name</key>
 			<string>keyword.operator.asm</string>
 		</dict>
@@ -55,7 +55,7 @@
 			<key>comment</key>
 			<string>Data transfer instruction mnemonics</string>
 			<key>match</key>
-			<string>(?i)\b(mov|movw|ldi|ld|ldd|lds|st|std|sts|lpm|spm|in|out|push|pop)\b</string>
+			<string>(?i)\b(mov|movw|ldi|ld|ldd|lds|lat|las|lac|st|std|sts|lpm|spm|in|out|push|pop|xch)\b</string>
 			<key>name</key>
 			<string>keyword.operator.asm</string>
 		</dict>
