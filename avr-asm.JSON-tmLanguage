@@ -1,6 +1,6 @@
-{ 
+{
     "name": "AVR ASM",
-    "scopeName": "source.asm", 
+    "scopeName": "source.asm",
     "fileTypes": ["asm", "inc"],
     "patterns": [
 
@@ -17,37 +17,37 @@
         },
 
         {
-            "match": "(?i)\\b(add|adc|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\\b",
+            "match": "(?i)\\b(add|adc|adiw|sub|subi|sbc|sbci|sbiw|fmul|fmuls|fmulsu|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser)\\b",
             "name": "keyword.operator.asm",
             "comment": "Arithmetic and logic instruction mnemonics"
         },
 
-        { 
-            "match": "(?i)\\b(rjmp|ijmp|rcall|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\\b",
+        {
+            "match": "(?i)\\b(eijmp|rjmp|ijmp|eicall|icall|rcall|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\\b",
             "name": "keyword.operator.asm",
             "comment": "Branch instruction mnemonics"
         },
 
-        { 
+        {
             "match": "(?i)\\b(sbi|cbi|lsl|lsr|rol|ror|asr|swap|bset|bclr|bst|bld|sec|clc|sen|cln|sez|clz|sei|cli|ses|cls|sev|clv|set|clt|seh|clh)\\b",
             "name": "keyword.operator.asm",
             "comment": "Bit and bit-test instruction mnemonics"
         },
 
-        { 
-            "match": "(?i)\\b(mov|movw|ldi|ld|ldd|lds|st|std|sts|lpm|spm|in|out|push|pop)\\b",
+        {
+            "match": "(?i)\\b(mov|movw|lac|las|lat|ldi|ld|ldd|lds|st|std|sts|lpm|spm|in|out|push|pop|xch)\\b",
             "name": "keyword.operator.asm",
             "comment": "Data transfer instruction mnemonics"
         },
 
-        { 
+        {
             "match": "(?i)\\b(nop|sleep|wdr|break)\\b",
             "name": "keyword.coperator.asm",
             "comment": "MCU control instruction mnemonics"
         },
 
-        { 
-            "match": "(?i)(^|\\s)\\.(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)",
+        {
+            "match": "(?i)(^|\\s)\\.\\b(byte|cseg|csegsize|db|dd|def|device|dq|dseg|dw|elif|else|endif|endm|endmacro|equ|error|eseg|exit|if|ifdef|ifndef|include|list|listmac|macro|message|nolist|org|set|undef)\\b",
             "name": "constant.character.asm",
             "comment": "AVR ASM 1.0 directives"
         },
