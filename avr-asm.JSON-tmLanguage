@@ -1,7 +1,7 @@
 {
     "name": "AVR ASM",
     "scopeName": "source.asm",
-    "fileTypes": ["asm", "inc"],
+    "fileTypes": ["asm", "inc", "S", "s"],
     "patterns": [
 
         {
