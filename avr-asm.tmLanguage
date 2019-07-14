@@ -6,6 +6,8 @@
 	<array>
 		<string>asm</string>
 		<string>inc</string>
+		<string>S</string>
+		<string>s</string>
 	</array>
 	<key>name</key>
 	<string>AVR ASM</string>
